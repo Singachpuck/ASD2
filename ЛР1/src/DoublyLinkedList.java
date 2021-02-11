@@ -1,8 +1,6 @@
 public class DoublyLinkedList<T> implements List<T>{
-    private Node<T> current = new Node<>(null);
-    private int current_index = -1;
-    private Node<T> first = current;
-    private Node<T> last = current;
+    private Node<T> first = new Node<>(null);
+    private Node<T> last = first;
     private int size = 0;
 
     @Override
@@ -22,7 +20,6 @@ public class DoublyLinkedList<T> implements List<T>{
         }
 
         size++;
-        current_index++;
     }
 
     @Override
@@ -47,78 +44,21 @@ public class DoublyLinkedList<T> implements List<T>{
     @Override
     public void add(int index, T e)
     {
-        if (size == 0 || index >= size || index < 0) throw new IndexOutOfBoundsException();
-
         if (index == 0)
         {
             addFirst(e);
         }
         else
         {
-            final int f = index;
-            final int l = size - index - 1;
-            final int m = current_index - index;
-
-            int min_len = Math.min(Math.min(f, l), Math.abs(m));
-
-            Node<T> change;
             Node<T> newNode = new Node<>(e);
 
-            if (min_len == f)
-            {
-                change = first;
+            Node<T> n = getByIndex(index);
 
-                for (int i = 0; i < f - 1; i++)
-                {
-                    change = change.next;
-                }
+            newNode.next = n;
+            newNode.prev = n.prev;
+            n.prev.next = newNode;
+            n.prev = newNode;
 
-                newNode.next = change.next;
-                change.next = newNode;
-                newNode.prev = change;
-            }
-            else if (min_len == l)
-            {
-                change = last;
-
-                for (int i = 0; i < l; i++)
-                {
-                    change = change.prev;
-                }
-
-                change.prev.next = newNode;
-                newNode.prev = change.prev;
-                newNode.next = change;
-            }
-            else if (m < 0)
-            {
-                change = current;
-
-                for (int i = 0; i < min_len - 1; i++)
-                {
-                    change = change.next;
-                }
-
-                newNode.next = change.next;
-                change.next = newNode;
-                newNode.prev = change;
-            }
-            else
-            {
-                change = current;
-
-                for (int i = 0; i < min_len; i++)
-                {
-                    change = change.prev;
-                }
-
-                change.prev.next = newNode;
-                newNode.prev = change.prev;
-                newNode.next = change;
-            }
-
-            current = newNode;
-            current_index = index;
             size++;
         }
     }
@@ -162,8 +102,6 @@ public class DoublyLinkedList<T> implements List<T>{
     @Override
     public void remove(int index)
     {
-        if (index >= size || index < 0) throw new IndexOutOfBoundsException();
-
         if (size == 0) return;
 
         if (index == 0)
@@ -176,68 +114,11 @@ public class DoublyLinkedList<T> implements List<T>{
         }
         else
         {
-            final int f = index;
-            final int l = size - index - 1;
-            final int m = current_index - index;
+            Node<T> n = getByIndex(index - 1);
 
-            int min_len = Math.min(Math.min(f, l), Math.abs(m));
+            n.next = n.next.next;
+            n.next.prev = n;
 
-            Node<T> change;
-
-            if (min_len == f)
-            {
-                change = first;
-
-                for (int i = 0; i < f - 1; i++)
-                {
-                    change = change.next;
-                }
-
-                change.next = change.next.next;
-                change.next.prev = change;
-                current = change.next;
-            }
-            else if (min_len == l)
-            {
-                change = last;
-
-                for (int i = 0; i < l - 1; i++)
-                {
-                    change = change.prev;
-                }
-
-                change.prev = change.prev.prev;
-                change.prev.next = change;
-                current = change;
-            }
-            else if (m < 0)
-            {
-                change = current;
-
-                for (int i = 0; i < min_len - 1; i++)
-                {
-                    change = change.next;
-                }
-
-                change.next = change.next.next;
-                change.next.prev = change;
-                current = change.next;
-            }
-            else
-            {
-                change = current;
-
-                for (int i = 0; i < min_len - 1; i++)
-                {
-                    change = change.prev;
-                }
-
-                change.prev = change.prev.prev;
-                change.prev.next = change;
-                current = change;
-            }
-
-            current_index = index;
             size--;
         }
     }
@@ -261,63 +142,9 @@ public class DoublyLinkedList<T> implements List<T>{
     @Override
     public void replace(int index, T e)
     {
-        if (size == 0 || index >= size || index < 0) throw new IndexOutOfBoundsException();
+        Node<T> n = getByIndex(index);
 
-        final int f = index;
-        final int l = size - index - 1;
-        final int m = current_index - index;
-
-        int min_len = Math.min(Math.min(f, l), Math.abs(m));
-
-        Node<T> change;
-
-        if (min_len == f)
-        {
-            change = first;
-
-            for (int i = 0; i < min_len; i++)
-            {
-                change = change.next;
-            }
-
-            change.setValue(e);
-        }
-        else if (min_len == l)
-        {
-            change = last;
-
-            for (int i = 0; i < min_len; i++)
-            {
-                change = change.prev;
-            }
-
-            change.setValue(e);
-        }
-        else if (m < 0)
-        {
-            change = current;
-
-            for (int i = 0; i < min_len; i++)
-            {
-                change = change.next;
-            }
-
-            change.setValue(e);
-        }
-        else
-        {
-            change = current;
-
-            for (int i = 0; i < min_len; i++)
-            {
-                change = change.prev;
-            }
-
-            change.setValue(e);
-        }
-
-        current = change;
-        current_index = index;
+        n.setValue(e);
     }
 
     @Override
@@ -370,6 +197,34 @@ public class DoublyLinkedList<T> implements List<T>{
         throw new IllegalArgumentException();
     }
 
+    private Node<T> getByIndex(int index)
+    {
+        if (size == 0 || index >= size || index < 0) throw new IndexOutOfBoundsException();
+
+        Node<T> change;
+
+        if (size / 2 >= index)
+        {
+            change = last;
+
+            for (int i = 0; i < size - index - 1; i++)
+            {
+                change = change.prev;
+            }
+        }
+        else
+        {
+            change = first;
+
+            for (int i = 0; i < index; i++)
+            {
+                change = change.next;
+            }
+        }
+
+        return change;
+    }
+
     @Override
     public String toString()
     {
@@ -383,5 +238,4 @@ public class DoublyLinkedList<T> implements List<T>{
         str.append("}");
         return str.toString();
     }
-
 }
