@@ -191,6 +191,7 @@ public class LinkedList<T> implements List<T>{
         return size;
     }
 
+    @Override
     public double sum()
     {
         if(size == 0) throw new IllegalStateException("Empty list");
