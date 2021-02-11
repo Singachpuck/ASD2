@@ -3,6 +3,7 @@ public class LinkedList<T> implements List<T>{
     private Node last;
     private int size = 0;
 
+
     private static class Node<T>
     {
         T element;
@@ -33,7 +34,7 @@ public class LinkedList<T> implements List<T>{
     {
         if(index < 0 || index > size)
         {
-            throw new IndexOutOfBoundsException("");
+            throw new IndexOutOfBoundsException("Index out of bounds");
         }
 
         if(index == 0) {
@@ -102,7 +103,7 @@ public class LinkedList<T> implements List<T>{
     public void remove(int index) {
         if(index < 0 || index > size)
         {
-            throw new IndexOutOfBoundsException("");
+            throw new IndexOutOfBoundsException("Index out of bounds");
         }
         if(index == 0) {
             removeFirst();
@@ -150,7 +151,7 @@ public class LinkedList<T> implements List<T>{
     {
         if(index < 0 || index > size)
         {
-            throw new IndexOutOfBoundsException("");
+            throw new IndexOutOfBoundsException("Index out of bounds");
         }
         if(index == 0) {
             replaceFirst(element);
@@ -188,6 +189,22 @@ public class LinkedList<T> implements List<T>{
     public int getSize()
     {
         return size;
+    }
+
+    public double sum()
+    {
+        if(size == 0) throw new IllegalStateException("Empty list");
+        double sum = 0;
+        Node node = first;
+        while(node !=null)
+        {
+            boolean isNumber = (node.element instanceof Number);
+            if(!isNumber) throw new IllegalStateException("Not a number list");
+            double value = ((Number)node.element).doubleValue();
+            sum += value;
+            node = node.next;
+        }
+        return sum;
     }
     @Override
     public String toString()
