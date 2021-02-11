@@ -8,4 +8,8 @@ public interface List<T> {
     void replaceFirst(T e);
     void replaceLast(T e);
     void replace(int index, T e);
+
+    int indexOf(T e);
+    int sum();
+    int getSize();
 }
