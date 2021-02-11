@@ -10,6 +10,6 @@ public interface List<T> {
     void replace(int index, T e);
 
     int indexOf(T e);
-    int sum();
+    double sum();
     int getSize();
 }
