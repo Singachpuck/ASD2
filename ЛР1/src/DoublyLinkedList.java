@@ -326,29 +326,23 @@ public class DoublyLinkedList<T> implements List<T>{
     }
 
     @Override
-    public int sum() {
-        if (size == 0) throw new NumberFormatException("Size is 0");
+    public double sum()
+    {
+        if(size == 0) throw new IllegalStateException("Empty list");
 
-        int s = 0;
-        Node<T> target = first;
+        double sum = 0;
 
-        while ( target != null )
+        Node<T> node = first;
+
+        while(node !=null)
         {
-            T v = target.getValue();
-
-            if (!(v instanceof Integer))
-            {
-                throw new NumberFormatException("Can't add non integer value");
-            }
-
-            Integer i = (Integer) v;
-
-            s += i;
-
-            target = target.next;
+            boolean isNumber = (node.getValue() instanceof Number);
+            if(!isNumber) throw new IllegalStateException("Not a number list");
+            double value = ((Number) node.getValue()).doubleValue();
+            sum += value;
+            node = node.next;
         }
-
-        return s;
+        return sum;
     }
 
     @Override
