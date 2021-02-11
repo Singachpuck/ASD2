@@ -200,13 +200,10 @@ public class DoublyLinkedList<T> implements List<T>{
     private Node<T> getByIndex(int index)
     {
         if (size == 0 || index >= size || index < 0) throw new IndexOutOfBoundsException();
-
         Node<T> change;
-
         if (size / 2 >= index)
         {
             change = last;
-
             for (int i = 0; i < size - index - 1; i++)
             {
                 change = change.prev;
@@ -215,7 +212,6 @@ public class DoublyLinkedList<T> implements List<T>{
         else
         {
             change = first;
-
             for (int i = 0; i < index; i++)
             {
                 change = change.next;

@@ -7,7 +7,7 @@ public class LinkedList<T> implements List<T>{
     private static class Node<T>
     {
         T element;
-        Node next;
+        Node next = null;
 
         public Node(T element)
         {
@@ -69,7 +69,6 @@ public class LinkedList<T> implements List<T>{
         Node node = new Node(element);
         if(first == null)
         {
-            node.next = null;
             first = node;
             last = node;
         } else
@@ -210,14 +209,14 @@ public class LinkedList<T> implements List<T>{
     @Override
     public String toString()
     {
-        String str = "{ ";
+        StringBuilder str = new StringBuilder("{ ");
         Node node = this.first;
         while(node != null)
         {
-            str += node.element.toString() + " ";
+            str.append(node.element.toString()).append(" ");
             node = node.next;
         }
-        str += "}";
-        return str;
+        str.append("}");
+        return str.toString();
     }
 }

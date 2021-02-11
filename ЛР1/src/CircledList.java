@@ -348,6 +348,21 @@ public class CircledList<T> implements List<T> {
         return this.size;
     }
 
+    @Override
+    public String toString()
+    {
+        StringBuilder str = new StringBuilder("{ ");
+        Node node = this.first;
+        while(node != last)
+        {
+            str.append(node.value.toString()).append(" ");
+            node = node.next;
+        }
+        str.append(node.value.toString());
+        str.append(" }");
+        return str.toString();
+    }
+
 
     private class Node {
         private Node next;
