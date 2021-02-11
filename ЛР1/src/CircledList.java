@@ -320,18 +320,19 @@ public class CircledList<T> implements List<T> {
 
 
     @Override
-    public int sum(){
+    public double sum(){
         if (isEmpty()) {
             throw new NoSuchElementException("Elements not found...");
         }
 
-        Integer result = 0;
+        double result = 0;
         int index = 0;
-        Node node = getNodeByIndex(index);
+        Node node = this.first;
 
         while (index < size){
-            if (node.value instanceof Integer){
-                result += (Integer)node.value;
+            if (node.value instanceof Number){
+                double v = ((Number)node.value).doubleValue();
+                result += v;
             }
             else{
                 throw new NumberFormatException("Value is not Integer...");
