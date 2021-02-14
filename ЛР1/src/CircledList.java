@@ -5,7 +5,6 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 
-import static java.util.Spliterators.spliterator;
 
 public class CircledList<T> implements List<T> {
     private Node first;
