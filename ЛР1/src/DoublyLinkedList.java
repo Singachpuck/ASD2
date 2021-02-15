@@ -201,6 +201,7 @@ public class DoublyLinkedList<T> implements List<T>{
     {
         if (size == 0 || index >= size || index < 0) throw new IndexOutOfBoundsException();
         Node<T> change;
+
         if (size / 2 <= index)
         {
             change = last;
