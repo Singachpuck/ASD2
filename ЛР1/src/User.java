@@ -5,12 +5,14 @@ public class User {
         List<Integer> linkList = new LinkedList<>();
         List<Integer> doubleList = new DoublyLinkedList<>();
         List<Integer> circleList = new CircledList<>();
+        List<Integer> arrList = new MyArrayList<>();
 
         //----Filling----
         for (int i = 0; i < 1000; i++) {
             linkList.addLast(i);
             doubleList.addLast(i);
             circleList.addLast(i);
+            arrList.addLast(i);
         }
         //----addTest----
         System.out.println("----addTest----");
@@ -26,9 +28,14 @@ public class User {
         circleList.add(50, 123);
         long end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns");
-        System.out.println("doubleList | " + (end2 - st2) + " ns");
-        System.out.println("circleList | " + (end3 - st3) + " ns");
+        long st4 = System.nanoTime();
+        arrList.add(50, 123);
+        long end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns");
 
         //----addLastTest----
         System.out.println("----addLastTest----");
@@ -51,9 +58,16 @@ public class User {
         }
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns/1000");
-        System.out.println("doubleList | " + (end2 - st2) + " ns/1000");
-        System.out.println("circleList | " + (end3 - st3) + " ns/1000");
+        st4 = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            arrList.addLast(312);
+        }
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns/1000");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns/1000");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns/1000");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns/1000");
 
         //----addFirstTest----
         System.out.println("----addFirstTest----");
@@ -76,9 +90,16 @@ public class User {
         }
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns/1000");
-        System.out.println("doubleList | " + (end2 - st2) + " ns/1000");
-        System.out.println("circleList | " + (end3 - st3) + " ns/1000");
+        st4 = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            arrList.addFirst(312);
+        }
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns/1000");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns/1000");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns/1000");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns/1000");
 
         //----removeFirstTest----
         System.out.println("----removeFirstTest----");
@@ -101,9 +122,16 @@ public class User {
         }
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns/1000");
-        System.out.println("doubleList | " + (end2 - st2) + " ns/1000");
-        System.out.println("circleList | " + (end3 - st3) + " ns/1000");
+        st4 = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            arrList.removeFirst();
+        }
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns/1000");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns/1000");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns/1000");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns/1000");
 
         //----removeLastTest----
         System.out.println("----removeLastTest----");
@@ -126,9 +154,16 @@ public class User {
         }
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns/1000");
-        System.out.println("doubleList | " + (end2 - st2) + " ns/1000");
-        System.out.println("circleList | " + (end3 - st3) + " ns/1000");
+        st4 = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            arrList.removeLast();
+        }
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns/1000");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns/1000");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns/1000");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns/1000");
 
         //----removeTest----
         System.out.println("----removeTest----");
@@ -145,9 +180,14 @@ public class User {
         circleList.remove(50);
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns");
-        System.out.println("doubleList | " + (end2 - st2) + " ns");
-        System.out.println("circleList | " + (end3 - st3) + " ns");
+        st4 = System.nanoTime();
+        arrList.remove(50);
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns");
 
         //----replaceLastTest----
         System.out.println("----replaceLastTest----");
@@ -170,9 +210,16 @@ public class User {
         }
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns/1000");
-        System.out.println("doubleList | " + (end2 - st2) + " ns/1000");
-        System.out.println("circleList | " + (end3 - st3) + " ns/1000");
+        st4 = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            arrList.replaceLast(12);
+        }
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns/1000");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns/1000");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns/1000");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns/1000");
 
         //----replaceFirstTest----
         System.out.println("----replaceFirstTest----");
@@ -195,9 +242,16 @@ public class User {
         }
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns/1000");
-        System.out.println("doubleList | " + (end2 - st2) + " ns/1000");
-        System.out.println("circleList | " + (end3 - st3) + " ns/1000");
+        st4 = System.nanoTime();
+        for (int i = 0; i < 1000; i++) {
+            arrList.replaceFirst(12);
+        }
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns/1000");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns/1000");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns/1000");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns/1000");
 
         //----replaceTest----
         System.out.println("----removeTest----");
@@ -214,9 +268,14 @@ public class User {
         circleList.replace(50,123);
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns");
-        System.out.println("doubleList | " + (end2 - st2) + " ns");
-        System.out.println("circleList | " + (end3 - st3) + " ns");
+        st4 = System.nanoTime();
+        arrList.replace(50,123);
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns");
 
         //----indexOfTest----
         System.out.println("----indexOfTest----");
@@ -233,9 +292,14 @@ public class User {
         circleList.indexOf(123);
         end3 = System.nanoTime();
 
-        System.out.println("linkList   | " + (end1 - st1) + " ns");
-        System.out.println("doubleList | " + (end2 - st2) + " ns");
-        System.out.println("circleList | " + (end3 - st3) + " ns");
+        st4 = System.nanoTime();
+        arrList.indexOf(123);
+        end4 = System.nanoTime();
+
+        System.out.println("LinkedList       | " + (end1 - st1) + " ns");
+        System.out.println("DoubleLinkedList | " + (end2 - st2) + " ns");
+        System.out.println("CircledList      | " + (end3 - st3) + " ns");
+        System.out.println("ArrayList        | " + (end4 - st4) + " ns");
 
 
 

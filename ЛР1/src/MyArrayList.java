@@ -117,7 +117,7 @@ public class MyArrayList<T> implements List<T> {
     }
 
     @Override
-    public int sum(){
+    public double sum(){
         if (pointer == -1) {
             throw new NoSuchElementException("Elements not found...");
         }
