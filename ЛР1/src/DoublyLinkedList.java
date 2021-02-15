@@ -203,7 +203,7 @@ public class DoublyLinkedList<T> implements List<T>{
 
         Node<T> change;
 
-        if (size / 2 >= index)
+        if (size / 2 <= index)
         {
             change = last;
 
