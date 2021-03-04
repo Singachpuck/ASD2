@@ -1,8 +1,9 @@
-import java.util.Iterator;
+import java.util.*;
 
 public class Tree<T extends Integer> implements Iterable<T> {
     private Node<T> root = new Node<>(null);
     private int size = 0;
+
 
     void add(T value)
     {
@@ -49,6 +50,8 @@ public class Tree<T extends Integer> implements Iterable<T> {
         }
 
         size++;
+        if (!this.isBalanced())
+            this.balance();
     }
 
     void remove(T value)
@@ -172,6 +175,8 @@ public class Tree<T extends Integer> implements Iterable<T> {
         }
 
         size--;
+        if (!this.isBalanced())
+            this.balance();
     }
 
     boolean contains(Object o)
@@ -302,6 +307,7 @@ public class Tree<T extends Integer> implements Iterable<T> {
         };
     }
 
+    @Override
     public String toString()
     {
         if (size == 0) return "[]";
@@ -316,4 +322,125 @@ public class Tree<T extends Integer> implements Iterable<T> {
         saso.replace(saso.length() - 2, saso.length(), " ]");
         return saso.toString();
     }
+
+
+    public void displayTree()
+    {
+        Stack<Node> globalStack = new Stack<Node>();
+        globalStack.push(root);
+        int emptyLeaf = 32;
+        boolean isRowEmpty = false;
+        System.out.println("****......................................................****");
+        while(isRowEmpty==false)
+        {
+
+            Stack<Node> localStack = new Stack<Node>();
+            isRowEmpty = true;
+            for(int j=0; j<emptyLeaf; j++)
+                System.out.print(' ');
+            while(globalStack.isEmpty()==false)
+            {
+                Node temp = globalStack.pop();
+                if(temp != null)
+                {
+                    System.out.print(temp.getValue());
+                    localStack.push(temp.left);
+                    localStack.push(temp.right);
+                    if(temp.left != null ||temp.right != null)
+                        isRowEmpty = false;
+                }
+                else
+                {
+                    System.out.print("--");
+                    localStack.push(null);
+                    localStack.push(null);
+                }
+                for(int j=0; j<emptyLeaf*2-2; j++)
+                    System.out.print(' ');
+            }
+            System.out.println();
+            emptyLeaf /= 2;
+            while(localStack.isEmpty()==false)
+                globalStack.push( localStack.pop() );
+        }
+        System.out.println("****......................................................****");
+    }
+
+
+    private ArrayList<Integer> toArrayList()
+    {
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (Integer i : this)
+        {
+            arr.add(i);
+        }
+        return arr;
+    }
+
+    private void balance(){
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr = this.toArrayList();
+        int start = 0;
+        int end = size-1;
+        int mid = (start + end) / 2;
+        Node<T> node = new Node(arr.get(mid));
+
+        node.left = createBalancedTree(arr, start, mid - 1);
+        node.right = createBalancedTree(arr, mid + 1, end);
+        root = node;
+    }
+
+    private Node<T> createBalancedTree(ArrayList<Integer> arr, int start, int end) {
+        if (end < start) {
+            return null;
+        }
+        int mid = (start + end) / 2;
+        Node<T> node = new Node(arr.get(mid));
+
+        node.left = createBalancedTree(arr, start, mid - 1);
+        node.right = createBalancedTree(arr, mid + 1, end);
+
+        return node;
+    }
+
+    private int maxDepth(Node<T> r) {
+        if (r == null) {
+            return 0;
+        }
+        return  max(maxDepth(r.left), maxDepth(r.right))+1;
+    }
+
+    private int max(int a, int b) {
+        if (a >= b){
+            return a;
+        }
+        else return b;
+    }
+
+    private int minDepth(Node<T> r) {
+        if (r == null) {
+            return 0;
+        }
+        return  min(minDepth(r.left), minDepth(r.right))+1;
+    }
+
+    private int min(int a, int b) {
+        if (a <= b){
+            return a;
+        }
+        else return b;
+    }
+
+    public boolean isBalanced() {
+        int maxD = maxDepth(root);
+        int minD = minDepth(root);
+        System.out.println("maxDepth: " + maxD);
+        System.out.println("minDepth: " + minD);
+        if (maxD - minD <= 1)
+            return true;
+        else
+            return false;
+
+    }
+
 }
