@@ -1,35 +1,50 @@
 public class Main {
     public static void main(String[] args) {
         Tree<Integer> tree = new Tree<>();
+        tree.add(500);
 
-        tree.add(16);
-        tree.add(5);
-        tree.add(18);
-        tree.add(3);
-        tree.add(9);
-        tree.add(17);
-        tree.add(20);
-        tree.add(2);
-        tree.add(4);
-        tree.add(7);
-        tree.add(10);
-        tree.add(16);
-        tree.add(7);
+        long start = System.nanoTime();
+        for(int i = 0; i<1000 ;i++ )
+        {
+            tree.add(i);
+        }
+        long end = System.nanoTime();
 
-        // tree.byLevel();
-        tree.displayTree();
+        System.out.println("addTest     | " + (end - start) +" нс/1000");
 
-        tree.remove(2);
-        tree.displayTree();
-        tree.remove(4);
-        tree.displayTree();
-        tree.remove(16);
-        tree.displayTree();
-        tree.add(16);
-        tree.displayTree();
+        start = System.nanoTime();
+        for(int i = 0; i<1000 ;i++ )
+        {
+            tree.remove(i);
+        }
+        end = System.nanoTime();
+
+        System.out.println("removeTest  | " + (end-start) + " нс/1000");
+
+        for(int i = 0; i<1000 ;i++ )
+        {
+            tree.add(i);
+        }
+
+        start = System.nanoTime();
+        for(int i = 0; i<1000 ;i++ )
+        {
+            tree.contains(i);
+        }
+        end = System.nanoTime();
+
+        System.out.println("containsTest| " + (end-start) + " нс/1000");
+
+        start = System.nanoTime();
+        for(int i = 0; i<1000 ;i++ )
+        {
+            tree.sum();
+        }
+        end = System.nanoTime();
+
+        System.out.println("sumTest     | " + (end-start) + " нс/1000");
 
 
-        System.out.println(tree.contains(9));
-        System.out.println(tree.sum());
+
     }
 }
