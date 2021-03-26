@@ -434,8 +434,8 @@ public class Tree<T extends Integer> implements Iterable<T> {
     public boolean isBalanced() {
         int maxD = maxDepth(root);
         int minD = minDepth(root);
-        System.out.println("maxDepth: " + maxD);
-        System.out.println("minDepth: " + minD);
+        //System.out.println("maxDepth: " + maxD);
+        //System.out.println("minDepth: " + minD);
         if (maxD - minD <= 1)
             return true;
         else
