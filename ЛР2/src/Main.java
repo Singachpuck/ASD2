@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Tree<Integer> tree = new Tree<>();
+        Node<Integer> n = new Node<>(10);
 
         tree.add(16);
         tree.add(5);
