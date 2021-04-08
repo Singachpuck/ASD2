@@ -26,12 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eda84292-904a-4800-927b-d8eff667884b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ЛР1/src/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/ЛР1/src/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ЛР3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ЛР3/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ЛР3/src/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/ЛР3/src/Tree.java" afterDir="false" />
-    </list>
+    <list default="true" id="eda84292-904a-4800-927b-d8eff667884b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +42,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/eclipse-workspace/Tree" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ЛР2" />
   </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="GroovyScriptRunConfiguration" factoryName="Groovy" nameIsGenerated="true">
@@ -72,8 +70,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612871543217</updated>
+      <workItem from="1617905918995" duration="30000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -98,16 +100,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616756653510">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1280.-196.1280.920/1366.-258.1280.984@0.0.1366.728" timestamp="1616756653510" />
-    <state x="448" y="183" key="FileChooserDialogImpl" timestamp="1616756773645">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="448" y="183" key="FileChooserDialogImpl/0.0.1366.728/-1280.-196.1280.920/1366.-258.1280.984@0.0.1366.728" timestamp="1616756773645" />
-    <state x="1786" y="-18" key="FileChooserDialogImpl/0.0.1366.728/1366.-265.1280.984/-1280.-258.1280.984@1366.-265.1280.984" timestamp="1613060930549" />
   </component>
 </project>

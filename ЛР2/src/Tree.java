@@ -7,6 +7,7 @@ public class Tree<T extends Integer> implements Iterable<T> {
 
     void add(T value)
     {
+        if (this.contains(value)) return;
         if (size == 0)
         {
             root.setValue(value);
@@ -56,7 +57,7 @@ public class Tree<T extends Integer> implements Iterable<T> {
 
     void remove(T value)
     {
-        if (size == 0) throw new IndexOutOfBoundsException("Can't remove from an empty tree");
+        if (size == 0) return;
 
         if (size == 1)
         {
@@ -178,6 +179,7 @@ public class Tree<T extends Integer> implements Iterable<T> {
 //        if (!this.isBalanced())
 //            this.balance();
     }
+
 
     boolean contains(Object o)
     {
