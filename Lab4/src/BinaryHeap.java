@@ -159,9 +159,7 @@ public class BinaryHeap<T extends Comparable<T>> {
     void sort(){
         copyHeap = (ArrayList<T>) items.clone();
         copySize = heapSize;
-        //ArrayList<T> arr = new ArrayList<>();
         for (int i = 0;i<heapSize;i++){
-            //arr.add(getmax());
             System.out.print(getmax() + " ");
         }
         System.out.println();
