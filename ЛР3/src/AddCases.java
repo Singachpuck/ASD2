@@ -1,0 +1,3 @@
+public enum AddCases {
+    LEFT_LEFT, LEFT_RIGHT, RIGHT_LEFT, RIGHT_RIGHT, OTHER_CASE
+}
