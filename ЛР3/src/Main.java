@@ -1,12 +1,11 @@
 public class Main {
-    public static void main(String[] args) {
-        Tree<Integer> tree = new Tree<>();
-        Node<Integer> n = new Node<>(10);
+    static int items = 1000;
 
-        tree.add(500);
+    public static void main(String[] args) {
+        BinarySearchTree<Integer> tree = new AvlTree<>();
 
         long start = System.nanoTime();
-        for(int i = 0; i<1000 ;i++ )
+        for(int i = 0; i<items; i++)
         {
             tree.add(i);
         }
@@ -15,7 +14,7 @@ public class Main {
         System.out.println("addTest     | " + (end - start) +" нс/1000");
 
         start = System.nanoTime();
-        for(int i = 0; i<1000 ;i++ )
+        for(int i = 0; i < items; i++)
         {
             tree.remove(i);
         }
@@ -23,13 +22,13 @@ public class Main {
 
         System.out.println("removeTest  | " + (end-start) + " нс/1000");
 
-        for(int i = 0; i<1000 ;i++ )
+        for(int i = 0; i<items; i++ )
         {
             tree.add(i);
         }
 
         start = System.nanoTime();
-        for(int i = 0; i<1000 ;i++ )
+        for(int i = 0; i<items; i++ )
         {
             tree.contains(i);
         }
@@ -38,13 +37,11 @@ public class Main {
         System.out.println("containsTest| " + (end-start) + " нс/1000");
 
         start = System.nanoTime();
-        for(int i = 0; i<1000 ;i++ )
-        {
-            tree.sum();
-        }
+
+        tree.sum();
+
         end = System.nanoTime();
 
         System.out.println("sumTest     | " + (end-start) + " нс/1000");
-
     }
 }
