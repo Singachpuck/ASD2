@@ -37,4 +37,6 @@ public class Main {
         long end = System.nanoTime();
         System.out.println("deleteTest  | " + (end-start)/1000000 + " мс/100 000");
     }
+
+
 }
