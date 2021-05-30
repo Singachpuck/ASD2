@@ -1,254 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="eda84292-904a-4800-927b-d8eff667884b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ЛР3/src/AddCases.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ЛР3/src/AvlTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ЛР3/src/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ЛР3/src/Colors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ЛР3/src/Directions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ЛР3/src/RedBlackTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ЛР3/src/RemoveCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ASD2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ASD2.iml" afterDir="false" />
+    <list default="true" id="ebda6f28-ac6a-4401-8b79-ac36be3de678" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ЛР3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ЛР3/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ЛР3/src/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ЛР3/src/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab6/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1oF9bQe219qlPdblYaPumwSHSO3" />
+  <component name="ProjectId" id="1stI8qIDCsA7RzfHns9D0oBDVQg" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ua.kpi.fict.acts.it03.Main" />
       <module name="ASD2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="GroovyScriptRunConfiguration" factoryName="Groovy" nameIsGenerated="true">
-      <module name="ASD2" />
-      <setting name="path" value="file://$PROJECT_DIR$/ЛР3/src/Main.java" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/ЛР3" />
-      <setting name="debug" value="false" />
-      <setting name="alternativeJrePathEnabled" value="true" />
-      <setting name="alternativeJrePath" value="11" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eda84292-904a-4800-927b-d8eff667884b" name="Default Changelist" comment="" />
-      <created>1612871543217</created>
+      <changelist id="ebda6f28-ac6a-4401-8b79-ac36be3de678" name="Default Changelist" comment="" />
+      <created>1621685304971</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1612871543217</updated>
-      <workItem from="1617905918995" duration="30000" />
-      <workItem from="1618673872412" duration="398000" />
-      <workItem from="1618674277223" duration="11362000" />
-      <workItem from="1618694939411" duration="388000" />
-      <workItem from="1618764727584" duration="801000" />
-      <workItem from="1618854460168" duration="6645000" />
-      <workItem from="1618923994128" duration="19034000" />
-      <workItem from="1619016135309" duration="5166000" />
-      <workItem from="1619031539686" duration="5629000" />
-      <workItem from="1619119715420" duration="652000" />
-      <workItem from="1619283144086" duration="5871000" />
-      <workItem from="1619446572035" duration="384000" />
-      <workItem from="1620159778019" duration="1796000" />
-      <workItem from="1620211742994" duration="1818000" />
+      <updated>1621685304971</updated>
+      <workItem from="1621685306271" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1618857534863">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1618857534863" />
-    <state x="223" y="62" width="1089" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618674267372">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="62" width="1089" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1618674267372" />
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1618925562323">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1618925562323" />
-    <state x="547" y="206" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1618674204651">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="547" y="206" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1618674204651" />
-    <state x="438" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618924025582">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="438" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1618924025582" />
-    <state width="433" height="456" key="DebuggerActiveHint" timestamp="1619295738602">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="433" height="456" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1619295738602" />
-    <state x="445" y="129" key="FileChooserDialogImpl" timestamp="1619446953374">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="445" y="129" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1619446953374" />
-    <state width="1493" height="245" key="GridCell.Tab.0.bottom" timestamp="1620212946354">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="245" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620212946354" />
-    <state width="1493" height="245" key="GridCell.Tab.0.center" timestamp="1620212946354">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="245" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620212946354" />
-    <state width="1493" height="245" key="GridCell.Tab.0.left" timestamp="1620212946354">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="245" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620212946354" />
-    <state width="1493" height="245" key="GridCell.Tab.0.right" timestamp="1620212946354">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="245" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620212946354" />
-    <state width="1493" height="337" key="GridCell.Tab.1.bottom" timestamp="1620212382685">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="337" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620212382685" />
-    <state width="1493" height="337" key="GridCell.Tab.1.center" timestamp="1620212382685">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="337" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620212382685" />
-    <state width="1493" height="337" key="GridCell.Tab.1.left" timestamp="1620212382684">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="337" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620212382684" />
-    <state width="1493" height="337" key="GridCell.Tab.1.right" timestamp="1620212382685">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="337" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620212382685" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1618674238485">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1618674238485" />
-    <state x="407" y="63" key="new project wizard" timestamp="1619446956307">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="63" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1619446956307" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1618930288414">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1618930288414" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="tree.root.parent" />
-        <watch expression="this" />
-        <watch expression="((RedBlackTree)this).root.left" custom="RedBlackTree" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/$Main.ic" NAME="Main Coverage Results" MODIFIED="1618943353667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
