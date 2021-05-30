@@ -110,9 +110,6 @@ public class MyArrayList<T> implements List<T> {
                 break;
             }
         }
-        if (index == -1) {
-            throw new NoSuchElementException("Element not found...");
-        }
         return index;
     }
 

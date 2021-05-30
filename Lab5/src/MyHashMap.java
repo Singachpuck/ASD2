@@ -52,15 +52,30 @@ public class MyHashMap<T> {
         }
     }
 
-    public ArrayList<T> toArray() {
-        ArrayList<T> result = new ArrayList<>();
+    public ArrayList<Integer> toArray() {
+        ArrayList<Integer> result = new ArrayList<>();
         for (Node<T> node : buckets) {
             while (node != null) {
-                result.add(node.value);
+                result.add((int) node.value);
                 node = node.nextNode;
             }
         }
         return result;
+    }
+
+    public ArrayList<Integer> sort() {
+        ArrayList<Integer> res = new ArrayList<>();
+        res = this.toArray();
+        for (int j = 1; j < res.size(); j++){
+            int  key = res.get(j);
+            int i = j - 1;
+            while ( i > 0 && res.get(i) > key) {
+                res.set(i + 1, res.get(i));
+                i = i - 1;
+            }
+            res.set(i + 1, key);
+        }
+        return res;
     }
 
     public void insert(String key, T value) {

@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+
 public class Main {
     static MyHashMap<Integer> hashMap = new MyHashMap<>();
 
     public static void main(String[] args){
         insertTest();
         findTest();
+        sortTest();
         deleteTest();
     }
 
@@ -26,6 +29,15 @@ public class Main {
         }
         long end = System.nanoTime();
         System.out.println("findTest    | " + (end-start)/1000000 + " мс/100 000");
+    }
+
+    public static void sortTest(){
+        ArrayList<Integer> res = new ArrayList<>();
+        res = hashMap.sort();
+        for(Integer item:res){
+            System.out.print(item + " ");
+        }
+        System.out.println();
     }
 
     public static void deleteTest(){

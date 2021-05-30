@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../queue_asd" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
@@ -58,6 +58,7 @@
       <workItem from="1620737264431" duration="608000" />
       <workItem from="1620825370582" duration="3539000" />
       <workItem from="1620901374638" duration="27000" />
+      <workItem from="1621794918831" duration="1187000" />
     </task>
     <servers />
   </component>

@@ -60,7 +60,7 @@ public class BinarySearchTree<T extends Integer> implements Iterable<T> {
     }
 
     void remove(T value) {
-        if (size == 0) throw new IndexOutOfBoundsException("Can't remove from an empty tree");
+        if (size == 0) return;
 
         if (size == 1) {
             if (value.equals(root.getValue())) root.setValue(null);
